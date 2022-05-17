@@ -1,0 +1,153 @@
+<!-- <div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-12">
+  <table class="table table-striped table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Publisher details</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Ride Date</th>
+        <td scope="col">Total Amt</td>
+        <th scope="col">Booked</th>
+        <th scope="col">Cancelled</th>
+        <th scope="col">Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-active" *ngFor = "let ride of publishRideList index as i">
+        <td>{{i+1}}</td>
+        <td>
+          {{ride.publisherId.name}}
+          {{ride.publisherId.mobile}}
+        </td>
+        <td>{{ride.fromId.place}}</td>
+        <td>{{ride.toId.place}}</td>
+        <td>{{ride.rideDate}}</td>
+        <td>{{ride.totalAmount}}</td>
+        <td>{{ride.isBooked}}</td>
+        <td>{{ride.isCancelled}}</td>
+        <td>{{ride.msgForBooker}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  </div>
+  </div>
+  </div>
+
+ -->
+
+  <!-- ---------------------*********************-------------------------------- -->
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-5">
+            <div class="widget widget-reminder">
+                <div class="widget-reminder-header">TODAY, NOV 4</div>
+                <div class="widget-reminder-container">
+                    <div class="widget-reminder-time">
+                        09:00<br />
+                        12:00
+                    </div>
+                    <div class="widget-reminder-divider bg-success"></div>
+                    <div class="widget-reminder-content">
+                        <h4 class="widget-title">Meeting with HR</h4>
+                        <div class="widget-desc"><i class="fa fa-map-pin"></i> Conference Room</div>
+                    </div>
+                </div>
+                <div class="widget-reminder-container">
+                    <div class="widget-reminder-time">
+                        20:00<br />
+                        23:00
+                    </div>
+                    <div class="widget-reminder-divider bg-primary"></div>
+                    <div class="widget-reminder-content">
+                        <h4 class="widget-title">Dinner with Richard</h4>
+                        <div class="widget-desc"><i class="fa fa-map-pin"></i> Tom's Too Restaurant</div>
+                        <div class="m-t-15">
+                            <a href="#" class="pull-right">Contact</a>
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" width="16" class="img-circle pull-left m-r-5" alt="" /> Richard Leong
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-reminder-header">TOMORROW, NOV 5</div>
+                <div class="widget-reminder-container">
+                    <div class="widget-reminder-time">All day</div>
+                    <div class="widget-reminder-divider bg-purple"></div>
+                    <div class="widget-reminder-content">
+                        <h4 class="widget-title"><i class="fa fa-gift text-purple"></i> Terry Birthday</h4>
+                    </div>
+                </div>
+                <div class="widget-reminder-container">
+                    <div class="widget-reminder-time">
+                        00:00<br />
+                        00:30
+                    </div>
+                    <div class="widget-reminder-divider bg-danger"></div>
+                    <div class="widget-reminder-content">
+                        <h4 class="widget-title">Server Maintenance</h4>
+                        <div class="widget-desc"><i class="ti-pin"></i> Data Centre</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="col-md-5">
+            <div class="widget widget-reminder">
+                <div class="widget-reminder-header">Thursday, May 15</div>
+                <div class="widget-reminder-container">
+                    <div class="widget-reminder-time">
+                        09:00<br />
+                    </div>
+                    <div class="widget-reminder-divider bg-success"></div>
+                    <div class="widget-reminder-content">
+                        <h4 class="widget-title"><i class="fa fa-map-pin"></i> Alok nagar , indore</h4>
+                        <!-- <div class="widget-desc"></div> -->
+                    </div>
+                </div>
+                <div class="widget-reminder-container">
+                    <div class="widget-reminder-time">
+                        10:00<br/>
+                    </div>
+                    <div class="widget-reminder-divider bg-primary"></div>
+                    <div class="widget-reminder-content">
+                        <h4 class="widget-title"><i class="fa fa-map-pin"></i>Palasia square , indore</h4>
+                        <!-- <div class="widget-desc"></i> Tom's Too Restaurant</div> -->
+                        <div class="m-t-15">
+                            <a href="#" class="pull-right">View profile</a>
+                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> Parth Patodi
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-reminder-header">Ride with</div>
+                <div class="widget-reminder-container">
+                    <!-- <div class="widget-reminder-time">All day</div> -->
+                    <div class="widget-reminder-divider bg-purple"></div>
+                    <div class="widget-reminder-content">
+                        <!-- <h4 class="widget-title"><i class="fa fa-gift text-purple"></i> Terry Birthday</h4> -->
+                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> Jitu Patil
+
+                    </div>
+                </div>
+                <div class="widget-reminder-container">
+                    <!-- <div class="widget-reminder-time">
+                        00:00<br />
+                        00:30
+                    </div> -->
+                    <div class="widget-reminder-divider bg-danger"></div>
+                    <div class="widget-reminder-content">
+                      <img src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> Sapna Prajapat
+
+                        <!-- <div class="widget-desc"><i class="ti-pin"></i> Data Centre</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
