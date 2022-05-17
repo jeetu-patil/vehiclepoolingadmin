@@ -98,8 +98,9 @@
         </div> -->
 
         <div class="col-md-5">
-            <div class="widget widget-reminder">
-                <div class="widget-reminder-header">Thursday, May 15</div>
+            <div *ngFor="let publishRide of publishRideList" class="widget widget-reminder">
+                <div class="widget-reminder-header">Thursday, May 15 {{publishRide.rideDate}} </div>
+                <!-- {{ publishRide.ride.rideDate | date: "dd/MM/yyyy" }} -->
                 <div class="widget-reminder-container">
                     <div class="widget-reminder-time">
                         09:00<br />

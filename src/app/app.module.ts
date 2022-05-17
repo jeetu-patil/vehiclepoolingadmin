@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +14,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ToastrModule } from 'ngx-toastr';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { CashingmemoryService } from './service/cashingmemory.service';
+import { AdminService } from './service/admin.service';
+// import {}
 
 @NgModule({
   declarations: [
@@ -35,7 +38,11 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [{
+    useClass: CashingmemoryService,
+    provide: HTTP_INTERCEPTORS,
+    multi: true },
+    AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

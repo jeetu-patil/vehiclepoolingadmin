@@ -17,6 +17,8 @@ export class BookRidesComponent implements OnInit {
    getBookedRides(){
      this.bookRide.getBookedRides().subscribe(data=>{
          this.bookRideList = data;
+         console.log(data);
+         console.log(data[0]._id);
      });
    }
 }
