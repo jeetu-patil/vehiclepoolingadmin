@@ -17,6 +17,7 @@ publishRideList:any;
 publishedRides(){
 this.publishRides.getPublishedRides().subscribe(data=>{
   this.publishRideList = data;
+  console.log(data);
 });
 }
 
