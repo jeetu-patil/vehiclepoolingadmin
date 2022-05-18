@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdminService } from '../service/admin.service';
 
 @Component({
@@ -8,12 +9,15 @@ import { AdminService } from '../service/admin.service';
 })
 export class PublishedRidesComponent implements OnInit {
 publishRideList:any;
-  constructor(private publishRides : AdminService) { }
+  constructor(private publishRides : AdminService,private router:Router) { }
 
   ngOnInit(): void {
     this.publishedRides();
   }
-
+  publisherProfile(id:any){
+    console.log("Id"+id);
+    this.router.navigate(['publisherProfile',id]);
+  }
 publishedRides(){
 this.publishRides.getPublishedRides().subscribe(data=>{
   this.publishRideList = data;

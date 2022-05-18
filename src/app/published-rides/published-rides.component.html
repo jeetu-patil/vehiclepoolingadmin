@@ -45,7 +45,8 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <div class="container">
-    <div class="row">
+    <h3 style="font-weight: 600; text-align: center; color: rgb(19, 19, 48); font-family: 'Times New Roman', Times, serif;"> Publisheres Rides</h3>
+    <div *ngFor="let publishRide of publishRideList" class="row">
         <!-- <div class="col-md-5">
             <div class="widget widget-reminder">
                 <div class="widget-reminder-header">TODAY, NOV 4</div>
@@ -97,44 +98,48 @@
             </div>
         </div> -->
 
-        <div class="col-md-5">
-            <div *ngFor="let publishRide of publishRideList" class="widget widget-reminder">
-                <div class="widget-reminder-header">Thursday, May 15 {{publishRide.rideDate}} </div>
+        <div class="col-md-12">
+            <div  class="widget widget-reminder">
+                <!-- 'dd/MM/yyyy' -->
+                <div style="text-align: center;" class="widget-reminder-header"> {{publishRide.rideDate | date:'full'}} </div>
                 <!-- {{ publishRide.ride.rideDate | date: "dd/MM/yyyy" }} -->
                 <div class="widget-reminder-container">
-                    <div class="widget-reminder-time">
+                    <!-- <div class="widget-reminder-time">
                         09:00<br />
-                    </div>
+                    </div> -->
                     <div class="widget-reminder-divider bg-success"></div>
                     <div class="widget-reminder-content">
-                        <h4 class="widget-title"><i class="fa fa-map-pin"></i> Alok nagar , indore</h4>
+                        <h4 class="widget-title"><i class="fa fa-map-pin"></i> From:{{publishRide.fromId.place}}</h4>
                         <!-- <div class="widget-desc"></div> -->
                     </div>
                 </div>
                 <div class="widget-reminder-container">
-                    <div class="widget-reminder-time">
+                    <!-- <div class="widget-reminder-time">
                         10:00<br/>
-                    </div>
+                    </div> -->
                     <div class="widget-reminder-divider bg-primary"></div>
                     <div class="widget-reminder-content">
-                        <h4 class="widget-title"><i class="fa fa-map-pin"></i>Palasia square , indore</h4>
+                        <h4 class="widget-title"><i class="fa fa-map-pin"></i>To:{{publishRide.toId.place}}</h4>
                         <!-- <div class="widget-desc"></i> Tom's Too Restaurant</div> -->
                         <div class="m-t-15">
-                            <a href="#" class="pull-right">View profile</a>
-                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> Parth Patodi
+                            <a  class="pull-right" style="cursor: pointer;" (click)="publisherProfile(publishRide._id)">View profile</a>
+                            <img style="margin-top: 5px; margin-right: 5px;" src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> {{publishRide.publisherId.name}}
                         </div>
                     </div>
                 </div>
-                <div class="widget-reminder-header">Ride with</div>
-                <div class="widget-reminder-container">
+                <div class="widget-reminder-header">Ride with :</div>
+                <!--  <div class="widget-reminder-container"> -->
                     <!-- <div class="widget-reminder-time">All day</div> -->
-                    <div class="widget-reminder-divider bg-purple"></div>
-                    <div class="widget-reminder-content">
+                    <!-- <div class="widget-reminder-divider bg-purple"></div> -->
+                    <!-- <div class="widget-reminder-content"> -->
                         <!-- <h4 class="widget-title"><i class="fa fa-gift text-purple"></i> Terry Birthday</h4> -->
-                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> Jitu Patil
-
+                        <div *ngFor="let ride of publishRide.historyOfUser">
+                        <img style="margin-top: 5px; margin-right: 5px;"  src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> {{ride.name}} 
                     </div>
-                </div>
+
+                    <!-- </div>  -->
+                <!-- </div> -->
+
                 <div class="widget-reminder-container">
                     <!-- <div class="widget-reminder-time">
                         00:00<br />
@@ -142,7 +147,7 @@
                     </div> -->
                     <div class="widget-reminder-divider bg-danger"></div>
                     <div class="widget-reminder-content">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> Sapna Prajapat
+                      <!-- <img src="https://bootdey.com/img/Content/avatar/avatar6.png" width="16" class="img-circle pull-left m-r-5" alt="" /> {{publishRide.totalSeat}} -->
 
                         <!-- <div class="widget-desc"><i class="ti-pin"></i> Data Centre</div> -->
                     </div>
@@ -152,3 +157,4 @@
     </div>
 </div>
 
+<!-- <router-outlet></router-outlet> -->
