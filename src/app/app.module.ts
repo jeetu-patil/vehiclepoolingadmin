@@ -16,6 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { CashingmemoryService } from './service/cashingmemory.service';
 import { AdminService } from './service/admin.service';
+// import { PublisherdetailComponent } from './publisherdetail/publisherdetail.component';
 // import {}
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AdminService } from './service/admin.service';
     DashboardPageComponent,
     NavbarComponent,
     SignInComponent,
-    SideBarComponent
+    SideBarComponent,
+    // PublisherdetailComponent
   ],
   imports: [
     BrowserModule,

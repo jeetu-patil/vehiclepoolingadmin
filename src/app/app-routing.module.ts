@@ -6,11 +6,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PublishedRidesComponent } from './published-rides/published-rides.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { PublisherdetailComponent } from './publisherdetail/publisherdetail.component';
 
 const routes: Routes = [
 {
    path:"",
    component:SignInComponent
+},
+{path:'publisherProfile/:id',
+component:PublisherdetailComponent
+
 },
   {
     path:"dashboard",
@@ -26,9 +31,9 @@ const routes: Routes = [
       },
       {
         path:'publish-rides',
-        component:PublishedRidesComponent
-      },
-      {
+        component:PublishedRidesComponent,
+      },          
+        {
         path:'book-rides',
         component:BookRidesComponent
       }
