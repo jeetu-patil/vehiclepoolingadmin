@@ -9,11 +9,13 @@ export class AdminService {
 
   signInApi = "http://localhost:3000/admin/signin";
 
-  userlist = "http://localhost:3000/admin/user-list";
+  userlist = "https://ridesharely-backend-api.herokuapp.com/admin/user-list";
 
-  publishedRide = "http://localhost:3000/admin/published-rides";
+  publishedRide = "https://ridesharely-backend-api.herokuapp.com/admin/published-rides";
 
-  bookedRide = "http://localhost:3000/admin/booked-rides";
+  // bookedRide = "http://localhost:3000/admin/booked-rides";
+  bookedRide = "https://ridesharely-backend-api.herokuapp.com/admin/booked-rides";
+  
 
   constructor(private http:HttpClient) { }
 

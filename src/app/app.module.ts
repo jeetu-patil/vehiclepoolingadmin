@@ -16,6 +16,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { CashingmemoryService } from './service/cashingmemory.service';
 import { AdminService } from './service/admin.service';
+// import { Chart } from 'chart.js';
+import { ChartsModule } from 'ng2-charts' ;
+
 // import { PublisherdetailComponent } from './publisherdetail/publisherdetail.component';
 // import {}
 
@@ -38,7 +41,10 @@ import { AdminService } from './service/admin.service';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    // Chart,
+    ChartsModule
+    
   ],
   providers: [{
     useClass: CashingmemoryService,

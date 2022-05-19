@@ -1,70 +1,72 @@
-<h1 style="font-weight: 600; text-align: center; color: rgb(19, 19, 48); font-family: 'Times New Roman', Times, serif;">Detail of Publisher</h1>
+<h1 style="font-weight: 600; text-align: center; text-shadow: 15px brown; color: rgb(19, 19, 48); font-family: 'Times New Roman', Times, serif;">Detail of Publisher</h1>
 
      <div class="container">
-        <div class="row">
+        <div class="row" style="margin-top: 15px;">
           <div class="col-md-6">
-            Name:{{user.publisherId.name}}
+            <strong> Name:</strong>  {{user.publisherId.name}}
           </div>
           <div class="col-md-6">
-            Email:{{user.publisherId.email}}       
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            Age:{{user.publisherId.age}}
-          </div>
-          <div class="col-md-6">
-            Aadhar:{{user.publisherId.aadharCard}}       
+          <strong>Email:</strong>{{user.publisherId.email}}       
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
-            Amt/per:{{user.amountPerPerson}}
+          <strong>Age:</strong>{{user.publisherId.age}}
           </div>
           <div class="col-md-6">
-            Seat:{{user.totalSeat}}
+          <strong>Aadhar:</strong>{{user.publisherId.aadharCard}}       
           </div>
-        </div><div class="row">
+        </div>
+        <div class="row">
           <div class="col-md-6">
-            Distance:{{user.distance}}
+          <strong> Amt/per:</strong>{{user.amountPerPerson}}
           </div>
           <div class="col-md-6">
-            Ride Date:{{user.rideDate }}  
+          <strong>Seat:</strong>{{user.totalSeat}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+          <strong>Distance:</strong>{{user.distance}}
+          </div>
+          <div class="col-md-6">
+          <strong>Ride Date:</strong>{{user.rideDate }}  
             <!-- {{user.rideDate | date}}       -->
           </div>
-        </div><div class="row">
+        </div>
+        <div class="row">
           <div class="col-md-6">
-            From:{{user.fromId.place}}
+          <strong>From</strong>:{{user.fromId.place}}
           </div>
           <div class="col-md-6">
-            To:{{user.toId.place}} 
+          <strong>To:</strong>{{user.toId.place}} 
           </div>
         </div>
-        About Ride :
+      <h4 style="margin-left: 30px;">About Ride :</h4>
         <div class="row">
           
           <div class="col-md-4">
-          Blocked:{{user.isBooked}}
+          <strong> Blocked:</strong>{{user.isBooked}}
            </div >
            <div class="col-md-4">
-           Cancelled:{{user.isCancelled}}
+          <strong>Cancelled:</strong>{{user.isCancelled}}
            </div >
            <div class="col-md-4">
-           TimeExpired:{{user.isTimeExpired}}
+          <strong>TimeExpired:</strong>{{user.isTimeExpired}}
            </div>
         </div>
      </div>
      <!-- amountPerPerson: 1.063382208752199 -->
 ​
 <!-- distance: 0.21 -->
-     <div>
+     <!-- <div> -->
        
        <!-- isBooked: true -->
 ​
-isCancelled: 
+ 
 ​
  
-     </div>
+     <!-- </div> -->
 
 
 
