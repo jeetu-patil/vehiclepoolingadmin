@@ -1,12 +1,27 @@
 .card {
   margin-bottom: 20px;
 }
+.row{
+  margin-left: 20px;
+  line-height: 30px;
+}
 .container{
   /* display: flex; */
-  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  /* font-weight: 600; */
+  font-size: 20px;
+  width:90%;
+  min-height: 40vh;
+  border: 2px solid rgb(26, 25, 25);
+  box-shadow: 5px 5px 5px 5px;
+  /* text-align: center; */
   /* justify-content: center; */
    /* align-items: center; */
 }
+
+
+
+
 .card-header {
   position: relative;
   display: -webkit-box;

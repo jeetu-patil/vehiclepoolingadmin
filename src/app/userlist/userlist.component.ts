@@ -9,7 +9,9 @@ import { AdminService } from '../service/admin.service';
 export class UserlistComponent implements OnInit {
   userlist:any;
   constructor(private userListService : AdminService) {
+    
     this.userListService.getUserList().subscribe(data=>{
+      console.log(data);
       this.userlist = data;
     });
    }
