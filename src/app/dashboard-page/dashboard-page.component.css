@@ -2,9 +2,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
+  margin-left: 15px;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+ .boxs .cart{
+  display: inline-block;
+  font-size: 32px;
+  height: 50px;
+  width: 60px;
+  background: #cce5ff;
+  line-height: 50px;
+  text-align: center;
+  color: #ff66cc;
+  border-radius: 12px;
+  margin: -15px 5 0 16px;
+}
+.boxs .indicator1 i{
+  height: 20px;
+  width: 20px;
+  background: #8FDACB;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: rgb(105, 12, 12);
+  font-size: 20px;
+  margin-right: 5px;
+}
+.boxs .number1{
+  display: inline-block;
+  font-size: 25px;
+  margin-top: -6px;
+  font-weight: 500;
+}
+.boxs .indicator i{
+  height: 20px;
+  width: 20px;
+  background: #9f8fda;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  color: rgb(137, 204, 146);
+  font-size: 20px;
+  margin-right: 5px;
+}
+.boxs .box-topic{
+  font-size: 20px;
+  font-weight: 500;
+}
+.boxs .sidefirst{
+  color: #0c17a8;
+  background: #d6ba78;
+  margin-right: 13px;
+  
+  
+}
+ .boxs .sidesecond{
+  color: #292199;
+  background: #ade09d;
+  margin-right: 13px;
+  
+}
+ .boxs .indicators{
+  display: flex;
+  align-items: center;
+}
+.boxs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: calc(100% / 4 - 15px); */
+  width: 230px;
+  height: 150px;
+  /* margin-left: 25px; */
+  margin-top: 10px;
+  background: #fff;
+  margin-left: 40px;
+  /* padding: 15px 14px; */
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 .number{
   margin-left: 50px ;
@@ -192,14 +269,15 @@ nav .profile-details i{
   align-items: center;
   justify-content: center;
   width: calc(100% / 4 - 15px);
+  height: 150px;
   background: #fff;
   padding: 15px 14px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 .overview-boxes .box-topic{
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 410;
 }
 .home-content .box .number{
   display: inline-block;

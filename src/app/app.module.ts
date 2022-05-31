@@ -18,6 +18,7 @@ import { CashingmemoryService } from './service/cashingmemory.service';
 import { AdminService } from './service/admin.service';
 // import { Chart } from 'chart.js';
 import { ChartsModule } from 'ng2-charts' ;
+import { InterceptorService } from './service/interceptor.service';
 
 // import { PublisherdetailComponent } from './publisherdetail/publisherdetail.component';
 // import {}
@@ -50,7 +51,12 @@ import { ChartsModule } from 'ng2-charts' ;
     useClass: CashingmemoryService,
     provide: HTTP_INTERCEPTORS,
     multi: true },
-    AdminService],
+    AdminService,
+  {
+    useClass:InterceptorService,
+    provide:HTTP_INTERCEPTORS,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -21,7 +21,8 @@ export class SignInComponent implements OnInit {
     console.log(this.email+"  ----   "+this.password);
       this.adminService.signIn(this.email,this.password).subscribe(data=>{
           this.toastr.success("Login Success","Success");
-          // sessionStorage.setItem("jwt-token",data.token);
+           sessionStorage.setItem("jwt-token",data.token);
+           console.log(sessionStorage.getItem("jwt-token"));
           // sessionStorage.setItem("userId",data.result._id);
           this.router.navigate(["dashboard"]);
       },err=>{

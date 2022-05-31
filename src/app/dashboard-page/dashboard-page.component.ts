@@ -14,7 +14,8 @@ export class DashboardPageComponent implements OnInit {
   chartData:any
   total_publisher: any;
   cancelled:any=0;
-  pcancell:any;
+  pcancell:any=0;
+  timeEx:any=0;
 
   constructor(private adminService: AdminService) {
     this.adminService.getUserList().subscribe(result => {
@@ -22,6 +23,7 @@ export class DashboardPageComponent implements OnInit {
       this.total_user = this.userlist.length
       sessionStorage.setItem('total_user',this.userlist.length)
     })
+
     this.adminService.getBookedRides().subscribe(result => {
       this.total_booker = result.length;
          for(let can of result)
@@ -31,23 +33,25 @@ export class DashboardPageComponent implements OnInit {
          }
       // this.cancelled=
       sessionStorage.setItem('total_boker',this.total_booker)
+      sessionStorage.setItem('TotalCancel',this.cancelled)
     })
     this.adminService.getPublishedRides().subscribe(result => {
       this.total_publisher = result.length;
       sessionStorage.setItem('total_publisher',this.total_publisher)
        for(let puca of result){
+          if(puca.isTimeExpired==true)
+          this.timeEx++;
+         console.log(puca.isTimeExpired);
           if(puca.isCancelled==true)
            this.pcancell++;
-       }
+              }
+              sessionStorage.setItem('publisherCancel',this.pcancell)
+              sessionStorage.setItem('timeEx',this.timeEx);
     })
-    // console.log(result.length);
+    
     this.chartData = [
       
-      // {
-      //   data: [0.5], 
-      //   // [sessionStorage.getItem('total_publisher')],
-      //   label: 'start'
-      // },
+      
       {      
         data: [sessionStorage.getItem('total_boker')],
         label: 'Bookers'
@@ -58,18 +62,27 @@ export class DashboardPageComponent implements OnInit {
         label: 'Publishers'
       },
       {
+        data:[sessionStorage.getItem('publisherCancel')],
+        label:'Cancel By Publisher'
+       },
+      {
+        data: [sessionStorage.getItem('timeEx')],
+        // data:this.timeEx,
+        label: 'TimeExpired'
+      },
+      {
         data: [sessionStorage.getItem('total_user')],
         label: 'Users'
       },
       {
-        data: [this.cancelled],
-        label: 'cancelled'
-      },
-      {
-        data: [0], 
-        // [sessionStorage.getItem('total_publisher')],
-        label: 'start'
-      },
+        data: [sessionStorage.getItem('TotalCancel')],
+        label: 'cancelled by booker'
+      }
+      // {
+      //   data: [0], 
+      //   // [sessionStorage.getItem('total_publisher')],
+      //   label: 'start'
+      // },
     ];
     
   
