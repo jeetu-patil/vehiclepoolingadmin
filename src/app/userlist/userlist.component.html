@@ -9,23 +9,26 @@
       <th>Name</th>
       <th>Email</th>
       <th>Mobile</th>
-      <th>Age</th>
-      <th>gender</th>
-      <th>MobileVerified</th>
-      <th>EmailVerified</th>
+      <th>Reference No.</th>
+      <th></th>
+      <!-- <th>MobileVerified</th>
+      <th>EmailVerified</th> -->
     </tr>
   </thead>
   <tbody>
     <tr class="table-active" *ngFor = "let user of userlist index as i">
       <td>{{i+1}}</td>
-      <td><img src="{{user.image}}" style="white-space: 20px; height: 20px; border-radius: 50%;"></td>
+      <td><img src="{{user.image}}" style="white-space: 20px; height: 80px; width: 80px; border-radius: 50%;"></td>
       <td>{{user.name}}</td>
       <td>{{user.email}}</td>
       <td>{{user.mobile}}</td>
-      <td>{{user.age}}</td>
-      <td>{{user.gender}}</td>
-      <td>{{user.isMobileVerified}}</td>
-      <td>{{user.isEmailVerified}}</td>
+      <!-- <td>{{user.age}}</td>
+      <td>{{user.gender}}</td> -->
+      <td>{{user.mobileNoR}}</td>
+      <td *ngIf="!user.isReferenceNo"><button (click)="Reference(user._id)">verifie</button></td>
+      <td *ngIf="!user.isBlock && user.isReferenceNo"><button (click)="BlockByAdmin(user._id)">Block</button></td>
+      <td *ngIf="user.isBlock"><button (click)="unBlockByAdmin(user._id)">UnBlock</button></td>
+      <!-- <td>{{user.isEmailVerified}}</td> -->
     </tr>
 
   </tbody>

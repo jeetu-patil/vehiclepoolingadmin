@@ -15,6 +15,9 @@ export class AdminService {
 
   // bookedRide = "http://localhost:3000/admin/booked-rides";
   bookedRide = "https://ridesharely-backend-api.herokuapp.com/admin/booked-rides";
+  verifyUser = "http://localhost:3000/admin/refereceVerification";
+  blockUser= "http://localhost:3000/admin/block";
+  unblockUser= "http://localhost:3000/admin/unblock";
   
 
   constructor(private http:HttpClient) { }
@@ -22,7 +25,15 @@ export class AdminService {
   signIn(email:string,password:string):Observable<any>{
      return this.http.post(this.signInApi,{email:email,password:password});
   }
-
+  verify(id:any):Observable<any>{
+   return this.http.post(this.verifyUser,{userId:id}) ;
+  }
+  Block(id:any):Observable<any>{
+    return this.http.post(this.blockUser,{userId:id}) ;
+   }
+   unBlock(id:any):Observable<any>{
+    return this.http.post(this.unblockUser,{userId:id}) ;
+   }
   getUserList():Observable<any>{
     return this.http.get(this.userlist);
   }
